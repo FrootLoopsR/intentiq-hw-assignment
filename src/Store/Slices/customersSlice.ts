@@ -23,7 +23,7 @@ const customerDataSlice = createSlice({
             updateLocalStorage(state)
         },
         addMultipleCustomers: (state, action: PayloadAction<CustomerData[]>) => {
-            if (!state.customerDataList)
+            if (!state.customerDataList.length)
                 state.customerDataList = action.payload;
         },
     },
